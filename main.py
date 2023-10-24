@@ -8,8 +8,7 @@ nomes = r.readlines()
 
 for i in range(len(nomes)):
     texto_desejado = nomes[0].replace("[name]", f"{nomes[i]}")
-    nome_arquivo = nomes[i].replace("\n", "")
-    l = open(f"./Output/letterTo{nome_arquivo}", "x")
+    l = open(f"./Output/letterTo{nomes[0].strip()}", "x")
     l.write(texto_desejado)
     for k in range(1, len(texto)):
        l.write(texto[k])
